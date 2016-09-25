@@ -9,34 +9,72 @@
 import Cocoa
 
 class Document: NSDocument {
+    
+    let textStorage = NSTextStorage()
+    private var encoding: String.Encoding = .utf8
+    
+    
+    
+    // MARK: -
 
     override init() {
+        
         super.init()
-        // Add your subclass-specific initialization here.
+        
+        self.hasUndoManager = true
     }
+    
 
     override class func autosavesInPlace() -> Bool {
+        
         return true
     }
-
+    
+    
     override func makeWindowControllers() {
-        // Returns the Storyboard that contains your Document window.
+        
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
+        
         self.addWindowController(windowController)
     }
 
+    
     override func data(ofType typeName: String) throws -> Data {
-        // Insert code here to write your document to data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning nil.
-        // You can also choose to override fileWrapperOfType:error:, writeToURL:ofType:error:, or writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        
+        let string = self.textStorage.string
+        let encoding = self.encoding
+        
+        self.unblockUserInteraction()
+        
+        guard let data = string.data(using: encoding, allowLossyConversion: true) else {
+            throw NSError(domain: CocoaError.errorDomain,
+                          code: CocoaError.fileWriteInapplicableStringEncoding.rawValue,
+                          userInfo: [NSStringEncodingErrorKey: encoding.rawValue])
+        }
+        
+        return data
     }
 
+    
     override func read(from data: Data, ofType typeName: String) throws {
-        // Insert code here to read your document from the given data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning false.
-        // You can also choose to override readFromFileWrapper:ofType:error: or readFromURL:ofType:error: instead.
-        // If you override either of these, you should also override -isEntireFileLoaded to return false if the contents are lazily loaded.
-        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        
+        // decode data to string
+        var convertedString: NSString?
+        var usedLossy: ObjCBool = false
+        self.encoding = String.Encoding(rawValue: NSString.stringEncoding(for: data,
+                                                                          encodingOptions: [StringEncodingDetectionOptionsKey.suggestedEncodingsKey: [String.Encoding.utf8.rawValue]],
+                                                                          convertedString: &convertedString,
+                                                                          usedLossyConversion: &usedLossy))
+        
+        guard let string = convertedString as? String else {
+            throw NSError(domain: CocoaError.errorDomain,
+                          code: CocoaError.fileWriteInapplicableStringEncoding.rawValue,
+                          userInfo: [NSStringEncodingErrorKey: self.encoding])
+        }
+        
+        let range = NSRange(location: 0, length: self.textStorage.length)
+        self.textStorage.replaceCharacters(in: range, with: string)
     }
 
 
