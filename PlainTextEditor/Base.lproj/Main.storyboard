@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -657,7 +659,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="PlainTextEditor" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="75" y="-57"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -668,14 +670,29 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="5E0840B9-B339-4DFB-888B-D036A9E27931" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="small" id="HOP-T8-kFo">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="75C95889-6BCD-4B65-BACD-839CEC7895E7" label="Info" paletteLabel="Info" tag="-1" image="NSInfo" id="eCx-j4-5UC">
+                                    <connections>
+                                        <action selector="toggleSidebar:" target="6f7-a7-6o1" id="vzH-i5-V1r"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lWH-KJ-OHQ"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="jvo-Hb-Rls"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="jvo-Hb-Rls"/>
+                                <toolbarItem reference="eCx-j4-5UC"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
+                        <segue destination="QYY-E8-p9w" kind="relationship" relationship="window.shadowedContentViewController" id="4MD-yw-BBI"/>
                     </connections>
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="71" y="272"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -714,7 +731,58 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-99" y="1202"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="sJp-aP-SIZ">
+            <objects>
+                <splitViewController id="QYY-E8-p9w" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="EW5-eM-wfR"/>
+                        <splitViewItem canCollapse="YES" holdingPriority="260" behavior="sidebar" id="xcy-5z-I58"/>
+                    </splitViewItems>
+                    <splitView key="splitView" wantsLayer="YES" dividerStyle="thin" vertical="YES" id="t0g-TL-MIj">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="feX-Ad-rW5"/>
+                        <segue destination="3cL-Lw-GBo" kind="relationship" relationship="splitItems" id="L4g-lb-pOk"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="Yzw-hp-E6i" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="727"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HV1-1L-nds">
+            <objects>
+                <viewController id="3cL-Lw-GBo" sceneMemberID="viewController">
+                    <view key="view" id="LBA-Um-Qhr">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-52-r5M">
+                                <rect key="frame" x="49" y="163" width="103" height="34"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sidebar" id="9XP-VR-LAe">
+                                    <font key="font" metaFont="systemMedium" size="28"/>
+                                    <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rbX-52-r5M" firstAttribute="centerX" secondItem="LBA-Um-Qhr" secondAttribute="centerX" id="0qS-zX-IsX"/>
+                            <constraint firstItem="rbX-52-r5M" firstAttribute="centerY" secondItem="LBA-Um-Qhr" secondAttribute="centerY" multiplier="0.8" id="URU-kP-6Rm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="S30-mw-Rmn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="1202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSInfo" width="32" height="32"/>
+    </resources>
 </document>
