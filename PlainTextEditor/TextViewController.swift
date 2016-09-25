@@ -8,11 +8,11 @@
 
 import Cocoa
 
-class TextViewController: NSViewController {
+final class TextViewController: NSViewController {
     
-    @IBOutlet var textView: NSTextView?
+    @IBOutlet private var textView: NSTextView!
     
-    var document: Document? {
+    private var document: Document? {
         return self.view.window?.windowController?.document as? Document
     }
     
@@ -24,14 +24,7 @@ class TextViewController: NSViewController {
         
         super.viewWillAppear()
         
-        guard let document = self.document else {
-            assertionFailure("no document found.")
-            return
-        }
-        
-        self.textView?.layoutManager?.replaceTextStorage(document.textStorage)
+        self.textView.layoutManager?.replaceTextStorage(self.document!.textStorage)
     }
-
-
+    
 }
-

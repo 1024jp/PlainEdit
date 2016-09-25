@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Document: NSDocument {
+final class Document: NSDocument {
     
     let textStorage = NSTextStorage()
     private var encoding: String.Encoding = .utf8
@@ -16,17 +16,8 @@ class Document: NSDocument {
     
     
     // MARK: -
-
-    override init() {
-        
-        super.init()
-        
-        self.hasUndoManager = true
-    }
     
-
     override class func autosavesInPlace() -> Bool {
-        
         return true
     }
     
@@ -38,7 +29,7 @@ class Document: NSDocument {
         
         self.addWindowController(windowController)
     }
-
+    
     
     override func data(ofType typeName: String) throws -> Data {
         
@@ -47,7 +38,7 @@ class Document: NSDocument {
         
         self.unblockUserInteraction()
         
-        guard let data = string.data(using: encoding, allowLossyConversion: true) else {
+        guard let data = string.data(using: encoding) else {
             throw NSError(domain: CocoaError.errorDomain,
                           code: CocoaError.fileWriteInapplicableStringEncoding.rawValue,
                           userInfo: [NSStringEncodingErrorKey: encoding.rawValue])
@@ -55,28 +46,14 @@ class Document: NSDocument {
         
         return data
     }
-
     
-    override func read(from data: Data, ofType typeName: String) throws {
+    
+    override func read(from url: URL, ofType typeName: String) throws {
         
-        // decode data to string
-        var convertedString: NSString?
-        var usedLossy: ObjCBool = false
-        self.encoding = String.Encoding(rawValue: NSString.stringEncoding(for: data,
-                                                                          encodingOptions: [StringEncodingDetectionOptionsKey.suggestedEncodingsKey: [String.Encoding.utf8.rawValue]],
-                                                                          convertedString: &convertedString,
-                                                                          usedLossyConversion: &usedLossy))
-        
-        guard let string = convertedString as? String else {
-            throw NSError(domain: CocoaError.errorDomain,
-                          code: CocoaError.fileWriteInapplicableStringEncoding.rawValue,
-                          userInfo: [NSStringEncodingErrorKey: self.encoding])
-        }
-        
+        let string = try String(contentsOf: url, usedEncoding: &self.encoding)
         let range = NSRange(location: 0, length: self.textStorage.length)
+        
         self.textStorage.replaceCharacters(in: range, with: string)
     }
-
-
+    
 }
-
