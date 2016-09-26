@@ -18,6 +18,19 @@ final class Document: NSDocument {
     // MARK: -
     
     override class func autosavesInPlace() -> Bool {
+        
+        return true
+    }
+    
+    
+    override class func canConcurrentlyReadDocuments(ofType: String) -> Bool {
+        
+        return true
+    }
+    
+    
+    override func canAsynchronouslyWrite(to url: URL, ofType typeName: String, for saveOperation: NSSaveOperationType) -> Bool {
+        
         return true
     }
     
