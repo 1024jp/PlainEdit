@@ -1,5 +1,5 @@
 
-PlainTextEditor
+PlainEdit
 =============================
 
 Super plain text editor for macOS to test foundamental Cocoa behaviors.
