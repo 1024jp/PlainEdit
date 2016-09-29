@@ -12,6 +12,7 @@
 		2A2EBF931D98873000745704 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2EBF921D98873000745704 /* Document.swift */; };
 		2A2EBF951D98873000745704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EBF941D98873000745704 /* Assets.xcassets */; };
 		2A2EBF981D98873000745704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EBF961D98873000745704 /* Main.storyboard */; };
+		2A401FEE1D9D804300ACE036 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401FED1D9D804300ACE036 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2A2EBF941D98873000745704 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A2EBF971D98873000745704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A2EBF991D98873000745704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A401FED1D9D804300ACE036 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -47,6 +49,7 @@
 				2A2EBF8E1D98873000745704 /* AppDelegate.swift */,
 				2A2EBF921D98873000745704 /* Document.swift */,
 				2A2EBF901D98873000745704 /* TextViewController.swift */,
+				2A401FED1D9D804300ACE036 /* Utilities.swift */,
 				2A2EBF941D98873000745704 /* Assets.xcassets */,
 				2A2EBF961D98873000745704 /* Main.storyboard */,
 				2A2EBF991D98873000745704 /* Info.plist */,
@@ -125,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A401FEE1D9D804300ACE036 /* Utilities.swift in Sources */,
 				2A2EBF911D98873000745704 /* TextViewController.swift in Sources */,
 				2A2EBF8F1D98873000745704 /* AppDelegate.swift in Sources */,
 				2A2EBF931D98873000745704 /* Document.swift in Sources */,
