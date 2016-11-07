@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /// debug friendly print with a dog/cow.
 func moof(_ items: Any..., function: String = #function) {
     
