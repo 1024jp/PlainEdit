@@ -16,6 +16,9 @@ final class WindowController: NSWindowController {
         
         self.shouldCascadeWindows = true
         self.windowFrameAutosaveName = "document"
+        
+        // -> needs layer to mask rounded window corners
+        self.contentViewController?.view.wantsLayer = true
     }
     
 }
