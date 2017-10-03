@@ -3,7 +3,7 @@
 //  PlainEdit
 //
 //  Created by 1024jp on 2016/09/26.
-//  © 2016 1024jp
+//  © 2016-2017 1024jp
 //
 
 import Cocoa
@@ -17,7 +17,7 @@ final class Document: NSDocument {
     
     // MARK: -
     
-    override class func autosavesInPlace() -> Bool {
+    override class var autosavesInPlace: Bool {
         
         return true
     }
@@ -29,7 +29,7 @@ final class Document: NSDocument {
     }
     
     
-    override func canAsynchronouslyWrite(to url: URL, ofType typeName: String, for saveOperation: NSSaveOperationType) -> Bool {
+    override func canAsynchronouslyWrite(to url: URL, ofType typeName: String, for saveOperation: NSDocument.SaveOperationType) -> Bool {
         
         return true
     }
@@ -37,8 +37,8 @@ final class Document: NSDocument {
     
     override func makeWindowControllers() {
         
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Document Window Controller")) as! NSWindowController
         
         self.addWindowController(windowController)
     }
