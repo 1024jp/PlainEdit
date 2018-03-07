@@ -3,7 +3,7 @@
 //  PlainEdit
 //
 //  Created by 1024jp on 2016/09/26.
-//  © 2016-2017 1024jp
+//  © 2016-2018 1024jp
 //
 
 import Cocoa
@@ -53,9 +53,8 @@ final class Document: NSDocument {
         self.unblockUserInteraction()
         
         guard let data = string.data(using: encoding) else {
-            throw NSError(domain: CocoaError.errorDomain,
-                          code: CocoaError.fileWriteInapplicableStringEncoding.rawValue,
-                          userInfo: [NSStringEncodingErrorKey: encoding.rawValue])
+            throw CocoaError.error(.fileWriteInapplicableStringEncoding,
+                                   userInfo: [NSStringEncodingErrorKey: encoding.rawValue])
         }
         
         return data
