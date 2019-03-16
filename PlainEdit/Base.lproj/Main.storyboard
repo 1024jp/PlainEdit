@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -668,11 +667,20 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <toolbar key="toolbar" implicitIdentifier="5E0840B9-B339-4DFB-888B-D036A9E27931" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="small" id="HOP-T8-kFo">
+                        <toolbar key="toolbar" implicitIdentifier="5E0840B9-B339-4DFB-888B-D036A9E27931" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="HOP-T8-kFo">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="75C95889-6BCD-4B65-BACD-839CEC7895E7" label="Info" paletteLabel="Info" tag="-1" image="NSInfo" sizingBehavior="auto" id="eCx-j4-5UC">
+                                <toolbarItem implicitItemIdentifier="92396D8A-1B4F-4C0A-AA92-10A0657A0A05" label="Info" paletteLabel="Info" tag="-1" image="NSActionTemplate" sizingBehavior="auto" id="b5u-E6-3im">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" tag="-1" id="zJU-Wc-qdT">
+                                        <rect key="frame" x="0.0" y="14" width="56" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSActionTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p4M-t6-YQ1">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
                                     <connections>
-                                        <action selector="toggleSidebar:" target="6f7-a7-6o1" id="vzH-i5-V1r"/>
+                                        <action selector="toggleSidebar:" target="6f7-a7-6o1" id="Ydh-c8-Vax"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lWH-KJ-OHQ"/>
@@ -680,7 +688,7 @@
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="jvo-Hb-Rls"/>
-                                <toolbarItem reference="eCx-j4-5UC"/>
+                                <toolbarItem reference="b5u-E6-3im"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -740,7 +748,7 @@
                 <splitViewController showSeguePresentationStyle="single" id="QYY-E8-p9w" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="EW5-eM-wfR"/>
-                        <splitViewItem canCollapse="YES" holdingPriority="260" behavior="sidebar" id="xcy-5z-I58"/>
+                        <splitViewItem canCollapse="YES" collapsed="YES" holdingPriority="260" behavior="sidebar" id="xcy-5z-I58"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="t0g-TL-MIj">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -791,6 +799,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSInfo" width="128" height="128"/>
+        <image name="NSActionTemplate" width="14" height="14"/>
     </resources>
 </document>
