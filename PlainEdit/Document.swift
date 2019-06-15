@@ -3,7 +3,7 @@
 //  PlainEdit
 //
 //  Created by 1024jp on 2016/09/26.
-//  © 2016-2018 1024jp
+//  © 2016-2019 1024jp
 //
 
 import Cocoa
@@ -63,7 +63,7 @@ final class Document: NSDocument {
     override func read(from url: URL, ofType typeName: String) throws {
         
         let string = try String(contentsOf: url, usedEncoding: &self.encoding)
-        let range = NSRange(location: 0, length: self.textStorage.length)
+        let range = NSRange(..<self.textStorage.length)
         
         self.textStorage.replaceCharacters(in: range, with: string)
     }
