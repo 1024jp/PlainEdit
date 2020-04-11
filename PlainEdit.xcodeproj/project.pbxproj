@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -87,7 +87,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = 1024jp;
 				TargetAttributes = {
 					2A2EBF8A1D98873000745704 = {
@@ -98,11 +98,10 @@
 				};
 			};
 			buildConfigurationList = 2A2EBF861D98873000745704 /* Build configuration list for PBXProject "PlainEdit" */;
-			compatibilityVersion = "Xcode 11.0";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 11.4";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
