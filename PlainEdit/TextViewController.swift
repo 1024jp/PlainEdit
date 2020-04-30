@@ -24,7 +24,7 @@ final class TextViewController: NSViewController {
         
         super.viewWillAppear()
         
-        self.textView.layoutManager?.replaceTextStorage(self.document!.textStorage)
+        self.textView.layoutManager?.replaceTextStorage(TextStorage())
     }
     
 }

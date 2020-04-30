@@ -10,7 +10,7 @@ import Cocoa
 
 final class Document: NSDocument {
     
-    let textStorage = TextStorage()
+    let textStorage = NSTextStorage()
     private var encoding: String.Encoding = .utf8
     
     
