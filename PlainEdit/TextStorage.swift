@@ -41,7 +41,7 @@ final class TextStorage: NSTextStorage {
     override func setAttributes(_ attrs: [NSAttributedString.Key: Any]?, range: NSRange) {
         
         self.storage.setAttributes(attrs, range: range)
-        edited(.editedCharacters, range: range, changeInLength: 0)
+        self.edited(.editedCharacters, range: range, changeInLength: 0)
     }
     
 }
