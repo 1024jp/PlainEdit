@@ -13,6 +13,7 @@
 		2A2EBF951D98873000745704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EBF941D98873000745704 /* Assets.xcassets */; };
 		2A2EBF981D98873000745704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EBF961D98873000745704 /* Main.storyboard */; };
 		2A401FEE1D9D804300ACE036 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401FED1D9D804300ACE036 /* Utilities.swift */; };
+		2AB2913B245A73E2004CC203 /* TextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2913A245A73E2004CC203 /* TextStorage.swift */; };
 		2ACF62EE1DA661630063D684 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF62ED1DA661630063D684 /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		2A2EBF971D98873000745704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A2EBF991D98873000745704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A401FED1D9D804300ACE036 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2AB2913A245A73E2004CC203 /* TextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStorage.swift; sourceTree = "<group>"; };
 		2ACF62ED1DA661630063D684 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +54,7 @@
 				2A2EBF921D98873000745704 /* Document.swift */,
 				2ACF62ED1DA661630063D684 /* WindowController.swift */,
 				2A2EBF901D98873000745704 /* TextViewController.swift */,
+				2AB2913A245A73E2004CC203 /* TextStorage.swift */,
 				2A401FED1D9D804300ACE036 /* Utilities.swift */,
 				2A2EBF941D98873000745704 /* Assets.xcassets */,
 				2A2EBF961D98873000745704 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 				2ACF62EE1DA661630063D684 /* WindowController.swift in Sources */,
 				2A2EBF911D98873000745704 /* TextViewController.swift in Sources */,
 				2A2EBF8F1D98873000745704 /* AppDelegate.swift in Sources */,
+				2AB2913B245A73E2004CC203 /* TextStorage.swift in Sources */,
 				2A2EBF931D98873000745704 /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
