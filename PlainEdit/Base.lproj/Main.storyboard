@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -670,12 +670,12 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="5E0840B9-B339-4DFB-888B-D036A9E27931" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="HOP-T8-kFo">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="92396D8A-1B4F-4C0A-AA92-10A0657A0A05" label="Info" paletteLabel="Info" tag="-1" image="NSActionTemplate" sizingBehavior="auto" id="b5u-E6-3im">
+                                <toolbarItem implicitItemIdentifier="92396D8A-1B4F-4C0A-AA92-10A0657A0A05" label="Info" paletteLabel="Info" tag="-1" image="sidebar.trailing" catalog="system" sizingBehavior="auto" id="b5u-E6-3im">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" tag="-1" id="zJU-Wc-qdT">
-                                        <rect key="frame" x="0.0" y="14" width="56" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSActionTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p4M-t6-YQ1">
+                                        <rect key="frame" x="0.0" y="14" width="48" height="32"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="sidebar.trailing" catalog="system" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p4M-t6-YQ1">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -780,7 +780,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-52-r5M">
-                                <rect key="frame" x="50" y="133" width="100" height="34"/>
+                                <rect key="frame" x="50" y="134" width="101" height="33"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sidebar" id="9XP-VR-LAe">
                                     <font key="font" metaFont="systemMedium" size="28"/>
                                     <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -800,6 +800,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="sidebar.trailing" catalog="system" width="18" height="14"/>
     </resources>
 </document>
