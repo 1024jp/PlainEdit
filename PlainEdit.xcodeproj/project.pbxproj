@@ -13,6 +13,7 @@
 		2A2EBF951D98873000745704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EBF941D98873000745704 /* Assets.xcassets */; };
 		2A2EBF981D98873000745704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2EBF961D98873000745704 /* Main.storyboard */; };
 		2A401FEE1D9D804300ACE036 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A401FED1D9D804300ACE036 /* Utilities.swift */; };
+		2A8427DD27B8BDB200E4AEB8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2A8427DC27B8BDB200E4AEB8 /* README.md */; };
 		2ACF62EE1DA661630063D684 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF62ED1DA661630063D684 /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		2A2EBF971D98873000745704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A2EBF991D98873000745704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A401FED1D9D804300ACE036 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2A8427DC27B8BDB200E4AEB8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2ACF62ED1DA661630063D684 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -32,6 +34,7 @@
 		2A2EBF821D98873000745704 = {
 			isa = PBXGroup;
 			children = (
+				2A8427DC27B8BDB200E4AEB8 /* README.md */,
 				2A2EBF8D1D98873000745704 /* PlainTextEditor */,
 				2A2EBF8C1D98873000745704 /* Products */,
 			);
@@ -120,6 +123,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8427DD27B8BDB200E4AEB8 /* README.md in Resources */,
 				2A2EBF951D98873000745704 /* Assets.xcassets in Resources */,
 				2A2EBF981D98873000745704 /* Main.storyboard in Resources */,
 			);
