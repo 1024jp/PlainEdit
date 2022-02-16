@@ -28,3 +28,14 @@ final class TextViewController: NSViewController {
     }
     
 }
+
+
+final class TextView: NSTextView {
+    
+    override func scrollRangeToVisible(_ range: NSRange) {
+        
+        print(range)
+        
+        super.scrollRangeToVisible(range)
+    }
+}
