@@ -3,7 +3,7 @@
 //  PlainEdit
 //
 //  Created by 1024jp on 2016/09/26.
-//  © 2016-2019 1024jp
+//  © 2016-2022 1024jp
 //
 
 import Cocoa
@@ -37,7 +37,7 @@ final class Document: NSDocument {
     
     override func makeWindowControllers() {
         
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let storyboard = NSStoryboard.main!
         let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
         
         self.addWindowController(windowController)
@@ -52,8 +52,8 @@ final class Document: NSDocument {
         self.unblockUserInteraction()
         
         guard let data = string.data(using: encoding) else {
-            throw CocoaError.error(.fileWriteInapplicableStringEncoding,
-                                   userInfo: [NSStringEncodingErrorKey: encoding.rawValue])
+            throw CocoaError(.fileWriteInapplicableStringEncoding,
+                             userInfo: [NSStringEncodingErrorKey: encoding.rawValue])
         }
         
         return data
