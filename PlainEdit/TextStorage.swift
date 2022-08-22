@@ -21,13 +21,13 @@ final class TextStorage: NSTextStorage {
     
     override var string: String {
         
-        return self.storage.string
+        self.storage.string
     }
     
     
     override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [NSAttributedString.Key: Any] {
         
-        return self.storage.attributes(at: location, effectiveRange: range)
+        self.storage.attributes(at: location, effectiveRange: range)
     }
     
     
