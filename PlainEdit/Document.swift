@@ -3,7 +3,7 @@
 //  PlainEdit
 //
 //  Created by 1024jp on 2016/09/26.
-//  © 2016-2022 1024jp
+//  © 2016-2023 1024jp
 //
 
 import Cocoa
@@ -14,24 +14,23 @@ final class Document: NSDocument {
     private var encoding: String.Encoding = .utf8
     
     
-    
     // MARK: -
     
     override class var autosavesInPlace: Bool {
         
-        return true
+        true
     }
     
     
     override class func canConcurrentlyReadDocuments(ofType: String) -> Bool {
         
-        return true
+        true
     }
     
     
     override func canAsynchronouslyWrite(to url: URL, ofType typeName: String, for saveOperation: NSDocument.SaveOperationType) -> Bool {
         
-        return true
+        true
     }
     
     
@@ -67,5 +66,4 @@ final class Document: NSDocument {
         
         self.textStorage.replaceCharacters(in: range, with: string)
     }
-    
 }

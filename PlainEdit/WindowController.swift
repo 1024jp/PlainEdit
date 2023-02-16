@@ -17,5 +17,4 @@ final class WindowController: NSWindowController {
         self.shouldCascadeWindows = true
         self.windowFrameAutosaveName = "document"
     }
-    
 }
