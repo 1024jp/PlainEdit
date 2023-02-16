@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +22,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Settings…" keyEquivalent="," id="BOF-NM-1cW"/>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -670,18 +669,9 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="5E0840B9-B339-4DFB-888B-D036A9E27931" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="HOP-T8-kFo">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="92396D8A-1B4F-4C0A-AA92-10A0657A0A05" label="Info" paletteLabel="Info" tag="-1" image="sidebar.trailing" catalog="system" sizingBehavior="auto" id="b5u-E6-3im">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" tag="-1" id="zJU-Wc-qdT">
-                                        <rect key="frame" x="0.0" y="14" width="48" height="32"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="sidebar.trailing" catalog="system" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p4M-t6-YQ1">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
+                                <toolbarItem implicitItemIdentifier="7FBD1453-EA23-4394-B9A9-64A795EB4113" label="Info" paletteLabel="Info" tag="-1" image="sidebar.trailing" catalog="system" bordered="YES" sizingBehavior="auto" id="TFP-Yx-lQG">
                                     <connections>
-                                        <action selector="toggleSidebar:" target="6f7-a7-6o1" id="Ydh-c8-Vax"/>
+                                        <action selector="toggleSidebar:" target="6f7-a7-6o1" id="gHQ-Kv-APM"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="lWH-KJ-OHQ"/>
@@ -689,7 +679,7 @@
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="jvo-Hb-Rls"/>
-                                <toolbarItem reference="b5u-E6-3im"/>
+                                <toolbarItem reference="TFP-Yx-lQG"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
